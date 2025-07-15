@@ -5,31 +5,148 @@
     <title></title>
 
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: antiquewhite;
+        }
 
+        div {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color:rgb(127, 182, 245);
+            width: 85%;
+            height: auto;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }   
+
+        .img-aparte {
+            height: auto;
+            display: block;
+            margin: 10px 0;
+            width: 250px;
+            height: 200px;
+            border-radius: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .img-django{
+            width: 100px;
+            height: 50px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            border-radius: 20px;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        .img-estructura{
+            width: 500px;
+            height: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .img-div{
+            display: flex;
+            justify-content: flex-end;
+            gap: 640px;
+        }
+
+        .div-usos{
+            display: flex;
+        }
+
+        img:hover{
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            
+        }
+
+        nav {
+        background-color: cadetblue;
+        border-radius: 18px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        padding: 20px 0 10px 0;
+        margin-bottom: 30px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 8px 18px;
+        border-radius: 8px;
+        transition: background 0.2s, color 0.2s;
+    }
+    nav ul li a:hover {
+        background: rgba(255,255,255,0.18);
+        color: #222;
+    }
+
+    nav:hover {
+        background-color: rgb(0, 128, 128);
+    }
     </style>
 </head>
 <body>
-    <div>
+
+    <nav>
+
+        <h1>Bienvenido a Django</h1>
+        <ul>
+            <li><a href="#definicion">Definicion</a></li>
+            <li><a href="#funcion">Funcion</a></li>
+            <li><a href="#estructura">Estructura</a></li>
+            <li><a href="#ventajas">Ventajas y Desventajas</a></li>
+            <li><a href="#sitios que lo utilizan">Usos</a></li>
+        </ul>
+    </nav>
+
+    <div class="img-div">
         <h1>Django</h1>
-        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1636780048014/niLN2J80j.png" alt="">
+        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1636780048014/niLN2J80j.png" alt="" class="img-django">
     </div>
     <div>
-        <h2>Definición</h2>
+        <h2 id="definicion">Definición</h2>
         <p>Django es un framework de Python que facilita la creación de sitios web utilizando Python.</p>
 
         <p>Django se encarga de las cosas difíciles para que usted pueda concentrarse en crear sus aplicaciones web.</p>
 
         <p>Django enfatiza la reutilización de componentes, también conocida como DRY (Don't Repeat Yourself), y viene con características listas para usar como sistema de inicio de sesión, conexión de base de datos y operaciones CRUD (Crear Leer Actualizar Eliminar).</p>
-        <img src="https://swapps.com/wp-content/uploads/2019/04/django-faster.jpg" alt="">
+        <img src="https://swapps.com/wp-content/uploads/2019/04/django-faster.jpg" alt="" class="img-aparte">
     </div>
 
-    <div>
+    <div id="funcion">
         <h2>Función</h2>
         <p>La función principal de Django es facilitar y acelerar el desarrollo de aplicaciones web complejas y basadas en bases de datos, eliminando gran parte del trabajo repetitivo asociado con este proceso.</p>
-        <img src="https://www.desarrollolibre.net/images/example/python/django/curso-django-3-con-python-3-integracion-con-vue-2-y-bootstrap-4.png" alt="">
+        <img src="https://www.desarrollolibre.net/images/example/python/django/curso-django-3-con-python-3-integracion-con-vue-2-y-bootstrap-4.png" class="img-aparte" alt="">
     </div>
 
-    <div>
+    <div id="estructura">
         <h2>Estructura</h2>
         <p>Django sigue el patrón de diseño MVT (Modelo Vista Plantilla).</p>
         <ul>
@@ -38,10 +155,10 @@
             <li>Plantilla: un archivo de texto (como un archivo HTML) que contiene el diseño de la página web, con lógica sobre cómo mostrar los datos.</li>
         </ul>
 
-        <img src="https://espifreelancer.com/images/Django_mtv.webp" alt="">
+        <img src="https://espifreelancer.com/images/Django_mtv.webp" alt="" class="img-estructura">
     </div>
 
-    <div>
+    <div id="ventajas">
         <h2>Ventajas y desventajas</h2>
 
         <h3>Ventajas</h3>
@@ -58,16 +175,30 @@
             <li>Menos Flexibilidad para Proyectos Pequeños: Para aplicaciones web muy simples o APIs REST puras con pocos endpoints, Django puede parecer excesivo</li>
         </ul>
 
-        <img src="https://cdn-icons-png.flaticon.com/512/17427/17427392.png" alt="">
+        <img src="https://blog.scielo.org/es/wp-content/uploads/sites/3/2019/04/vantagens-desvantagens-opr.png" alt="" class="img-aparte">
     </div>
 
-    <div>
-        <h2>Sitios que lo utilizan</h2>
-        <img src="https://i.blogs.es/759769/trucosinstagram/1366_2000.jpg" alt="">
-        <img src="https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc" alt="">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/YouTube_social_white_square_%282024%29.svg" alt="">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJHH6aoXJfdAScGlfLHNln2tjqUwkCDbxt8Q&s" alt="">
-        <img src="https://i.pcmag.com/imagery/reviews/01eqrJlwTzs4ACRmWo01fCt-45..v1668723864.jpg" alt="">
+    <div class="div-usos" id="sitios que lo utilizan">
+        <h2>Sitios que lo utilizan👉: </h2>
+        <a href="https://www.instagram.com/">
+            <img src="https://i.blogs.es/759769/trucosinstagram/1366_2000.jpg" alt="" class="img-aparte">
+        </a>
+
+        <a href="https://open.spotify.com/intl-es">
+            <img src="https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc" alt="" class="img-aparte">
+        </a>
+
+        <a href="https://www.youtube.com/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/YouTube_social_white_square_%282024%29.svg" alt="" class="img-aparte">
+        </a>
+
+        <a href="https://co.pinterest.com/">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJHH6aoXJfdAScGlfLHNln2tjqUwkCDbxt8Q&s" alt="" class="img-aparte">
+        </a>
+
+        <a href="https://www.dropbox.com">
+            <img src="https://i.pcmag.com/imagery/reviews/01eqrJlwTzs4ACRmWo01fCt-45..v1668723864.jpg" alt="" class="img-aparte">
+        </a>
     </div>
 </body>
 </html>
