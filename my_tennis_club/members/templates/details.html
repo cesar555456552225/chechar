@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html>
+<div>
+{% extends "master.html" %}
 
-<body>
+    {% block title %}
+    Details about {{ mymember.firstname }} {{ mymember.lastname }}
+    {% endblock %}
 
-<h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+
+    {% block content %}
+    <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
   
-<p>Telefono {{ mymember.phone }}</p>
-<p>Fecha {{ mymember.joined_date }}</p>
+    <p>Phone {{ mymember.phone }}</p>
+    <p>Member since: {{ mymember.joined_date }}</p>
+  
+    <p>👉 Salir a los <a href="/members">Miembros</a></p>
 
-<p>Salir a <a href="/members">Members</a></p>
+        <img clas="img-perfil" src="https://definicion.de/wp-content/uploads/2019/07/perfil-de-usuario.png" alt="">
 
-</body>
-</html>
+  </div>
+{% endblock %}

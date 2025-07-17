@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      /*background-color: #34495e;*/
+      background-image: url("https://ballrescuer.com/cdn/shop/articles/cuidar_las_bolas_de_tenis.jpg?v=1676279566&width=1100");
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  p{
+    color: #17202a;
+  }
+  h1, h2, h3 {
+      color:#17202a;
+      text-align: center;
+  }
+
+  div {
+  background-color: #80350059;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  li{
+    margin: 5px 0;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  a{
+    color: #17202a;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+    color:aquamarine;
+  }
+
+  img {
+      width: 300px;
+      height: 250px;
+      border-radius: 20px;
+  }
+  img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+  }
+
+  .nombres{
+    background-color: #d6dbdf;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-weight: 10px;  
+  }
+</style>
+<body>
+{% block content %}
+{% endblock %}
+</body>
+</html>
